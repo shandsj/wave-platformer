@@ -45,6 +45,15 @@ TagManager:
   - name: Environment
     uniqueID: 3236071327
     locked: 0
+  - name: Enemies
+    uniqueID: 108326489
+    locked: 0
   - name: Player
     uniqueID: 1054146309
+    locked: 0
+  - name: Abilties
+    uniqueID: 3844950041
+    locked: 0
+  - name: Foreground
+    uniqueID: 2927460643
     locked: 0
