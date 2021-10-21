@@ -24,7 +24,7 @@ public class SpellCaster : MonoBehaviour
         var instance = GameObject.Instantiate(SpellPrefab);
         instance.transform.position = transform.position;
         instance.transform.Rotate(0, 0, spriteRenderer.flipX ? 180 : 0);
-        instance.GetComponent<VelocityController>().Direction = new Vector3(spriteRenderer.flipX ? -1 : 1, 0, 0);
+        instance.GetComponent<SpellController>().Direction = new Vector3(spriteRenderer.flipX ? -1 : 1, 0, 0);
         instances.Add(instance);
     }
 }
