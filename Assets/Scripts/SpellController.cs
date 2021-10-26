@@ -7,6 +7,8 @@ public class SpellController : MonoBehaviour
     public float Speed;
     public Vector3 Direction;
 
+    public GameObject Score;
+
     public float Damage = 1;
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class SpellController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyHealthController>().Damage(Damage);
+            collision.gameObject.GetComponent<EnemyController>().ApplyDamage(Damage);
             Destroy(gameObject);
         }
     }

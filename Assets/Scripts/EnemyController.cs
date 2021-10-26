@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyHealthController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float Health = 1;
     // public float DamageCooldown = 1;
     public GameObject DeathExplosionPrefab;
+
+    public int BaseScore = 10;
+
+    public GameObject Score;
 
     private float lastDamageTime;
 
@@ -14,7 +18,7 @@ public class EnemyHealthController : MonoBehaviour
     {
     }
 
-    public void Damage(float amount)
+    public void ApplyDamage(float amount)
     {
         // if (Time.time - lastDamageTime > DamageCooldown)
         {
@@ -27,6 +31,8 @@ public class EnemyHealthController : MonoBehaviour
                 deathExplosion.transform.position = gameObject.transform.position;
                 Destroy(gameObject);
                 Destroy(deathExplosion, 1);
+
+                Score.GetComponent<ScoreController>().AddScore(BaseScore);
             }
         }
     }
