@@ -1,45 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HealthController))]
 public class EnemyController : MonoBehaviour
 {
-    public float Health = 1;
-    // public float DamageCooldown = 1;
     public GameObject DeathExplosionPrefab;
 
     public int BaseScore = 10;
 
     public GameObject Score;
 
-    private float lastDamageTime;
+    private HealthController healthController;
 
     public void Start()
     {
+        this.healthController = GetComponent<HealthController>();
+        this.healthController.Death += OnDeath;
     }
 
-    public void ApplyDamage(float amount)
+    private void OnDeath(object sender, EventArgs e)
     {
-        // if (Time.time - lastDamageTime > DamageCooldown)
-        {
-            lastDamageTime = Time.time;
-            Health -= amount;
+        var deathExplosion = GameObject.Instantiate(DeathExplosionPrefab);
+        deathExplosion.transform.position = gameObject.transform.position;
+        Destroy(gameObject);
+        Destroy(deathExplosion, 1);
 
-            if (Health <= 0)
-            {
-                var deathExplosion = GameObject.Instantiate(DeathExplosionPrefab);
-                deathExplosion.transform.position = gameObject.transform.position;
-                Destroy(gameObject);
-                Destroy(deathExplosion, 1);
-
-                Score.GetComponent<ScoreController>().AddScore(BaseScore);
-            }
-        }
-    }
-
-    public void Heal(float amount)
-    {
-        Health += amount;
-    }
-    
+        Score.GetComponent<ScoreController>().AddScore(BaseScore);
+    }    
 }

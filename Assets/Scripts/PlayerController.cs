@@ -1,57 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(HealthController))]
+[RequireComponent(typeof(SpriteFlashEffect))]
 public class PlayerController : MonoBehaviour
 {
-    public int Health = 3;
-    public Font Font;
-    
-    public float DamageCooldown = 1;
-
-    private float lastDamageTakenTime;
-
-    void OnGUI()
-    {
-
-        var heartString = string.Empty;
-        for (int i = 0; i < Health; i++)
-        {
-            heartString += "❤ ";
-        }
-        GUI.Label(new Rect(10, 5, Screen.width, Screen.height), $"{heartString}", new GUIStyle()
-        {
-            alignment = TextAnchor.UpperLeft,
-            font = Font,
-            fontSize = 45,
-            normal = 
-            {
-                textColor = Color.white,
-            },            
-        });
-    }
+    private HealthController healthController;
+    private SpriteFlashEffect spriteFlashEffect;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        this.healthController = GetComponent<HealthController>();
+        this.spriteFlashEffect = GetComponent<SpriteFlashEffect>();
+
+        this.healthController.Damaged += this.OnDamaged;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDamaged(object sender, EventArgs e)
     {
-        
+        this.spriteFlashEffect.Flash();
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            if (Time.time - lastDamageTakenTime > DamageCooldown)
-            {
-                lastDamageTakenTime = Time.time;
-                Health -= 1;
-            }
+            this.healthController.TakeDamage(1);
         }
     }
 }

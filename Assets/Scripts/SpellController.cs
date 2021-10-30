@@ -9,7 +9,7 @@ public class SpellController : MonoBehaviour
 
     public GameObject Score;
 
-    public float Damage = 1;
+    public int Damage = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +27,7 @@ public class SpellController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyController>().ApplyDamage(Damage);
+            collision.gameObject.GetComponent<HealthController>().TakeDamage(Damage);
             Destroy(gameObject);
         }
     }

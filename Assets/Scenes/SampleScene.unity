@@ -10748,6 +10748,9 @@ GameObject:
   - component: {fileID: 1557128604}
   - component: {fileID: 1557128603}
   - component: {fileID: 1557128605}
+  - component: {fileID: 1557128608}
+  - component: {fileID: 1557128607}
+  - component: {fileID: 1557128606}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11037,9 +11040,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2d02b993600a947825d20cc4e45248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 3
+--- !u!114 &1557128606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557128592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d5220d71d64cf47a2a25305338b957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   Font: {fileID: 12800000, guid: 259eae46c5a68464093d0cb2cb7f9335, type: 3}
+--- !u!114 &1557128607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557128592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c080eae8f121ed44f859bde1f48fa5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 3
   DamageCooldown: 1
+--- !u!114 &1557128608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557128592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3f2c6098623176488aafa4ee5f1b09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlashMaterial: {fileID: 2100000, guid: d770497bd1dc73f4982509ff9c0aa22d, type: 2}
+  LengthOfFlash: 0.05
+  Repeat: 3
 --- !u!1 &1603259150
 GameObject:
   m_ObjectHideFlags: 0
@@ -11318,6 +11360,7 @@ GameObject:
   - component: {fileID: 1763208935}
   - component: {fileID: 1763208936}
   - component: {fileID: 1763208937}
+  - component: {fileID: 1763208938}
   m_Layer: 0
   m_Name: Zombie Prefab
   m_TagString: Enemy
@@ -11557,7 +11600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55facb61448e6814799ef34da8c36e0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 1
   DeathExplosionPrefab: {fileID: 1230686418}
   BaseScore: 10
   Score: {fileID: 1121832446}
@@ -11582,6 +11624,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1763208938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763208926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c080eae8f121ed44f859bde1f48fa5a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health: 1
+  DamageCooldown: 1
 --- !u!1 &1828261139
 GameObject:
   m_ObjectHideFlags: 0
