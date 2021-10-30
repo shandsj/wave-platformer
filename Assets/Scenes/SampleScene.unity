@@ -692,9 +692,9 @@ GameObject:
   - component: {fileID: 732476948}
   - component: {fileID: 732476950}
   - component: {fileID: 732476949}
-  - component: {fileID: 732476951}
   - component: {fileID: 732476952}
   - component: {fileID: 732476953}
+  - component: {fileID: 732476954}
   m_Layer: 0
   m_Name: Fireball Prefab
   m_TagString: PlayerAbility
@@ -760,12 +760,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732476945}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 14.94, y: -7, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 16.379045, y: -7.3106456, z: -8.9562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 847992417}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!95 &732476948
 Animator:
@@ -5558,22 +5558,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &732476951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 732476945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d1c840fdccd9354c91dd5fcd12359df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 15
-  Direction: {x: 0, y: 0, z: 0}
-  Score: {fileID: 0}
-  Damage: 1
 --- !u!61 &732476952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5621,6 +5605,52 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &732476954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732476945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce1fe9e8deb5add4f87eeeb0c55bc055, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 0
+  Direction: {x: 0, y: 0, z: 0}
+  Damage: 1
+--- !u!1 &847992416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847992417}
+  m_Layer: 0
+  m_Name: Ability Prefabs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &847992417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847992416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4390461, y: 0.31064558, z: 8.9562}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 732476947}
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &951861720
 GameObject:
   m_ObjectHideFlags: 0
@@ -10594,7 +10624,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1358887750
 GameObject:
@@ -10697,13 +10727,14 @@ GameObject:
   - component: {fileID: 1557128596}
   - component: {fileID: 1557128601}
   - component: {fileID: 1557128602}
-  - component: {fileID: 1557128604}
-  - component: {fileID: 1557128603}
   - component: {fileID: 1557128605}
   - component: {fileID: 1557128608}
   - component: {fileID: 1557128607}
   - component: {fileID: 1557128606}
   - component: {fileID: 1557128609}
+  - component: {fileID: 1557128610}
+  - component: {fileID: 1557128604}
+  - component: {fileID: 1557128603}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -10960,10 +10991,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557128592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de90918bfecc2a54a94fb16e7ca13f12, type: 3}
+  m_Script: {fileID: 11500000, guid: 602f71c6df5a1544f945c23434b05154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellCaster: {fileID: 1557128604}
   AssignedMouseButton: 0
 --- !u!114 &1557128604
 MonoBehaviour:
@@ -10974,13 +11004,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1557128592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9b3241c0dcbf5c48a97a9bb9f230b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: deb41a93712a3e94cb1f15654b389ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellPrefab: {fileID: 732476945}
-  Cooldown: 3
-  AmmoPouchSize: 3
-  Speed: 5
+  Prefab: {fileID: 732476945}
+  RefillTime: 3
+  MaximumAmmoPouchSize: 3
+  MovementSpeed: 10
+  Damage: 1
 --- !u!114 &1557128605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11052,6 +11083,21 @@ MonoBehaviour:
   MultiplierIncrease: 1
   MaximumTimeBetweenKills: 2
   KillsNeededForMultiplierIncrease: 3
+--- !u!114 &1557128610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557128592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 061b658e27af9154da04d5c23d5e0ede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ActiveAbility: {fileID: 0}
+  Abilities:
+  - {fileID: 1557128604}
 --- !u!1 &1603259150
 GameObject:
   m_ObjectHideFlags: 0

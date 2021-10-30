@@ -2,20 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellController : MonoBehaviour
+public class AbilityInstanceController : MonoBehaviour
 {
     public float Speed;
     public Vector3 Direction;
-
-    public GameObject Score;
-
     public int Damage = 1;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
