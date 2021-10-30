@@ -6,7 +6,7 @@ public class ScoreController : MonoBehaviour
 {
     public Font Font;
 
-    public int MaximumMultiplier = 20;
+    public int MaximumMultiplier = 10;
     public int MultiplierIncrease = 1;
     public float MaximumTimeBetweenKills = 2.0f;
     public int KillsNeededForMultiplierIncrease = 3;

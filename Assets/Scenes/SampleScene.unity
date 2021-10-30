@@ -5652,54 +5652,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1121832446
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1121832448}
-  - component: {fileID: 1121832447}
-  m_Layer: 0
-  m_Name: Score
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1121832447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121832446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b71079d8daa73bd429324f7a021a7ea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Font: {fileID: 12800000, guid: 259eae46c5a68464093d0cb2cb7f9335, type: 3}
-  MaximumMultiplier: 10
-  MultiplierIncrease: 1
-  MaximumTimeBetweenKills: 2
-  KillsNeededForMultiplierIncrease: 3
---- !u!4 &1121832448
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1121832446}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.4390461, y: 0.31064558, z: 8.9562}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1227372602
 GameObject:
   m_ObjectHideFlags: 0
@@ -10751,6 +10703,7 @@ GameObject:
   - component: {fileID: 1557128608}
   - component: {fileID: 1557128607}
   - component: {fileID: 1557128606}
+  - component: {fileID: 1557128609}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11082,6 +11035,23 @@ MonoBehaviour:
   FlashMaterial: {fileID: 2100000, guid: d770497bd1dc73f4982509ff9c0aa22d, type: 2}
   LengthOfFlash: 0.05
   Repeat: 3
+--- !u!114 &1557128609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557128592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b71079d8daa73bd429324f7a021a7ea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Font: {fileID: 12800000, guid: 259eae46c5a68464093d0cb2cb7f9335, type: 3}
+  MaximumMultiplier: 10
+  MultiplierIncrease: 1
+  MaximumTimeBetweenKills: 2
+  KillsNeededForMultiplierIncrease: 3
 --- !u!1 &1603259150
 GameObject:
   m_ObjectHideFlags: 0
@@ -11602,7 +11572,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DeathExplosionPrefab: {fileID: 1230686418}
   BaseScore: 10
-  Score: {fileID: 1121832446}
 --- !u!50 &1763208937
 Rigidbody2D:
   serializedVersion: 4

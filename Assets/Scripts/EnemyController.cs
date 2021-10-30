@@ -10,14 +10,15 @@ public class EnemyController : MonoBehaviour
 
     public int BaseScore = 10;
 
-    public GameObject Score;
-
     private HealthController healthController;
+    private ScoreController[] scoreControllers;
 
-    public void Start()
+    private void Awake()
     {
         this.healthController = GetComponent<HealthController>();
         this.healthController.Death += OnDeath;
+
+        this.scoreControllers = FindObjectsOfType<ScoreController>();
     }
 
     private void OnDeath(object sender, EventArgs e)
@@ -27,6 +28,10 @@ public class EnemyController : MonoBehaviour
         Destroy(gameObject);
         Destroy(deathExplosion, 1);
 
-        Score.GetComponent<ScoreController>().AddScore(BaseScore);
+        
+        foreach (var scoreController in this.scoreControllers)
+        {
+            scoreController.AddScore(BaseScore);
+        }
     }    
 }

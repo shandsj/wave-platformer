@@ -11,7 +11,7 @@ public class EnemyMovmentController : MonoBehaviour
     private float lastJumpTime = 0;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         movementController2D = GetComponent<DYP.BasicMovementController2D>();
     }

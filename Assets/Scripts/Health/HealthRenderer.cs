@@ -10,7 +10,7 @@ public class HealthRenderer : MonoBehaviour
     private HealthController healthController;
 
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         this.healthController = GetComponent<HealthController>();
     }
