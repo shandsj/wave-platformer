@@ -318,9 +318,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wave: 1
-  MinimEnemiesToSpawnPerCooldownPeriod: 1
-  MaximumEnemiesToSpawnPerCooldownPeriod: 5
+  MaximumEnemiesToSpawnPerCooldownPeriod: 3
   SpawnCooldownTime: 5
+  EnemiesToSpawnPerWave: 5
+  WaveDifficultyIncreaseFactor: 1.25
 --- !u!114 &189667237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11051,6 +11052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 3
   DamageCooldown: 1
+  IsDead: 0
 --- !u!114 &1557128608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11592,6 +11594,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpCooldown: 3
   Target: {fileID: 1557128592}
+  MinimumSpeed: 0.05
+  MaximumSpeed: 0.15
 --- !u!114 &1763208935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11653,6 +11657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Health: 1
   DamageCooldown: 1
+  IsDead: 0
 --- !u!1 &1828261139
 GameObject:
   m_ObjectHideFlags: 0

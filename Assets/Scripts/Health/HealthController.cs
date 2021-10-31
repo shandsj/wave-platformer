@@ -16,6 +16,11 @@ public class HealthController : MonoBehaviour
     public float DamageCooldown = 1;
 
     /// <summary>
+    /// Indicates whether the attached entity is dead.
+    /// </summary>
+    public bool IsDead = false;
+
+    /// <summary>
     /// Raised when health reaches zero.
     /// </summary>
     public event EventHandler Death;
@@ -40,8 +45,9 @@ public class HealthController : MonoBehaviour
             this.OnDamaged();
         }
         
-        if (this.Health <= 0)
+        if (this.Health <= 0 && !this.IsDead)
         {
+            this.IsDead = true;
             this.OnDeath();
         }
     }

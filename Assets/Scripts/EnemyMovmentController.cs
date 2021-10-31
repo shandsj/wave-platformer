@@ -7,13 +7,18 @@ public class EnemyMovmentController : MonoBehaviour
 {
     [SerializeField] public float JumpCooldown = 5f;
     [SerializeField] public GameObject Target;
+    public float MinimumSpeed = .05f;
+    public float MaximumSpeed = .15f;
     private DYP.BasicMovementController2D movementController2D;
     private float lastJumpTime = 0;
+    private float speed;
 
     // Start is called before the first frame update
     void Awake()
     {
-        movementController2D = GetComponent<DYP.BasicMovementController2D>();
+        this.movementController2D = GetComponent<DYP.BasicMovementController2D>();
+        this.speed = Random.Range(this.MinimumSpeed, this.MaximumSpeed);
+
     }
 
     // Update is called once per frame
@@ -29,7 +34,7 @@ public class EnemyMovmentController : MonoBehaviour
             direction = 1;
         }
         
-        movementController2D.InputMovement(new Vector2(.1f * direction, 0));
+        movementController2D.InputMovement(new Vector2(this.speed * direction, 0));
 
         if (ShouldJump())
         {

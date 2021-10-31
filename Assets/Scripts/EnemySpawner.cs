@@ -11,12 +11,17 @@ public class EnemySpawner : MonoBehaviour
     private WaveController waveController;
     private GameObject[] spawnPoints;
 
-    public void Spawn()
+    /// <summary>
+    /// Spawns a new enemy.
+    /// </summary>
+    /// <returns></returns>
+    public GameObject Spawn()
     {
         var spawnPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
 
         var newSpawn = GameObject.Instantiate(EnemyPrefab);
         newSpawn.transform.position = spawnPoint.transform.position;
+        return newSpawn;
     }
 
     // Start is called before the first frame update
