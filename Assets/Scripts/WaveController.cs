@@ -18,7 +18,7 @@ public class WaveController : MonoBehaviour
     public float WaveDifficultyIncreaseFactor = 1.1f;
 
     private int enemiesKilledThisWave = 0;
-    private bool startingNewWave = false;
+    public bool IsStartingNewWave = false;
     private float lastSpawnTime;
     private List<GameObject> enemies = new List<GameObject>();
 
@@ -38,9 +38,9 @@ public class WaveController : MonoBehaviour
             SpawnEnemies();
         }
 
-        if (!startingNewWave && this.enemiesKilledThisWave >= this.EnemiesToSpawnPerWave)
+        if (!this.IsStartingNewWave && this.enemiesKilledThisWave >= this.EnemiesToSpawnPerWave)
         {
-            this.startingNewWave = true;
+            this.IsStartingNewWave = true;
 
             // New wave
             StartCoroutine(NewWaveCoroutine());
@@ -82,7 +82,7 @@ public class WaveController : MonoBehaviour
 
     private bool IsSpawnNeeded()
     {
-        return !startingNewWave && Time.time - lastSpawnTime > SpawnCooldownTime && this.enemies.Count() < this.EnemiesToSpawnPerWave;
+        return !IsStartingNewWave && Time.time - lastSpawnTime > SpawnCooldownTime && this.enemies.Count() < this.EnemiesToSpawnPerWave;
     }
 
     private void OnEnemyDeath(object sender, EventArgs e)
@@ -92,16 +92,16 @@ public class WaveController : MonoBehaviour
 
     private IEnumerator NewWaveCoroutine()
     {
-        yield return new WaitForSeconds(5);
+        this.Wave++;
+        yield return new WaitForSeconds(15);
 
         this.enemiesKilledThisWave = 0;
         this.enemies.Clear();
-        this.Wave++;
         this.MaximumEnemiesToSpawnPerCooldownPeriod = Mathf.Max(this.MaximumEnemiesToSpawnPerCooldownPeriod + 1, (int)(this.MaximumEnemiesToSpawnPerCooldownPeriod * this.WaveDifficultyIncreaseFactor));
         // this.SpawnCooldownTime
         this.EnemiesToSpawnPerWave = Mathf.Max(this.EnemiesToSpawnPerWave + 1, (int)(this.EnemiesToSpawnPerWave * this.WaveDifficultyIncreaseFactor));     
 
         Debug.Log($"Starting new wave {this.Wave}: enemies to spawn {this.EnemiesToSpawnPerWave}");
-        this.startingNewWave = false;
+        this.IsStartingNewWave = false;
     }
 }
