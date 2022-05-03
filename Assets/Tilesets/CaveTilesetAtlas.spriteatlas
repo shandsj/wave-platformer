@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CaveTilesetAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 7995772484663189339, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 7296855237879871077, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -7456925835245560478, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -5554656932543716972, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -3215449732098119829, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -7550926101627037683, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 8991470541814180929, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -1302479548626312157, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 3966631263468300637, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -4276468832884634915, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 947328441456141180, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 4939846237954386229, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -2311011567526088997, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 6283583948136947837, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 6746602845901105456, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 872812017216456193, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 3438320692944254299, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -8494451587137238300, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 7312709577489174669, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 5842616814675919683, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 6247397884372852140, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 7323548475207905139, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 6652560581631962850, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -5585223962960624624, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 4997162834409583705, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -5799708524293737476, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -4385519512071140680, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -1954582038374670129, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 6031821834715970577, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -7492213951743983544, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: 8747264175808965874, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -4828109694143119606, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  - {fileID: -1988373875640183710, guid: d81be41f976f9e84291364817e5ccde7, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Scratch_Tileset_8x8_24
+  - Scratch_Tileset_8x8_25
+  - Scratch_Tileset_8x8_26
+  - Scratch_Tileset_8x8_27
+  - Scratch_Tileset_8x8_20
+  - Scratch_Tileset_8x8_21
+  - Scratch_Tileset_8x8_22
+  - Scratch_Tileset_8x8_23
+  - Scratch_Tileset_8x8_32
+  - Scratch_Tileset_8x8_31
+  - Scratch_Tileset_8x8_30
+  - Scratch_Tileset_8x8_15
+  - Scratch_Tileset_8x8_14
+  - Scratch_Tileset_8x8_17
+  - Scratch_Tileset_8x8_16
+  - Scratch_Tileset_8x8_11
+  - Scratch_Tileset_8x8_10
+  - Scratch_Tileset_8x8_13
+  - Scratch_Tileset_8x8_12
+  - Scratch_Tileset_8x8_19
+  - Scratch_Tileset_8x8_18
+  - Scratch_Tileset_8x8_6
+  - Scratch_Tileset_8x8_7
+  - Scratch_Tileset_8x8_4
+  - Scratch_Tileset_8x8_5
+  - Scratch_Tileset_8x8_2
+  - Scratch_Tileset_8x8_3
+  - Scratch_Tileset_8x8_0
+  - Scratch_Tileset_8x8_1
+  - Scratch_Tileset_8x8_8
+  - Scratch_Tileset_8x8_9
+  - Scratch_Tileset_8x8_28
+  - Scratch_Tileset_8x8_29
+  m_RenderDataMap: {}
+  m_Tag: CaveTilesetAtlas
+  m_IsVariant: 0
